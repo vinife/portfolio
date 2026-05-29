@@ -1,11 +1,11 @@
 {
-  "commit": "7aa24409966f447abc6482e14b9158bac58c7849",
-  "generated": "2026-05-29T03:06:59.749Z",
+  "commit": "498e99bbe7fd2c1d57713a160ba73a39f9d3f799",
+  "generated": "2026-05-29T03:08:05.392Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "7aa24409966f447abc6482e14b9158bac58c7849",
-        "hash": "129011645",
+        "commit": "498e99bbe7fd2c1d57713a160ba73a39f9d3f799",
+        "hash": "3959716140",
         "path": "outstatic/content/projects/exemplo.mdx"
       },
       "author": {
@@ -13,7 +13,7 @@
         "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
       },
       "collection": "projects",
-      "coverImage": "images/mountain2-Y4Nz.jpeg",
+      "coverImage": "",
       "publishedAt": "2026-05-29T01:49:38.326Z",
       "slug": "exemplo",
       "status": "published",
