@@ -1,6 +1,13 @@
 {
-  "title": "Projects",
-  "slug": "projects",
+  "title": "projects",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "coverImage": {
+      "title": "coverImage",
+      "description": "",
+      "required": false,
+      "fieldType": "String",
+      "dataType": "string"
+    }
+  }
 }
