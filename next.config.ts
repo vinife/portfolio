@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withOutstatic } from "outstatic/next-plugin";
 
 const nextConfig: NextConfig = {
   transpilePackages: ["next-mdx-remote"],
@@ -24,4 +25,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withOutstatic(nextConfig);

@@ -36,7 +36,8 @@ type CollectionName = "projects" | "posts";
 async function getDb() {
   try {
     return await load();
-  } catch {
+  } catch (error) {
+    console.error("Erro ao carregar DB:", error);
     return null;
   }
 }
@@ -72,18 +73,24 @@ export async function getProfile() {
 
 export async function getProjects(limit?: number) {
   const db = await getDb();
-  if (!db) return [];
+  // if (!db) return [];
+  if (!db) {
+    console.log("DB não carregou");
+    return [];
+  }
 
-  let query = db
+  const query = await db
     .find<ProjectDocument>({
       collection: "projects",
       status: "published",
     })
-    .sort({ publishedAt: -1 });
+    .sort({ publishedAt: -1 })
+    .toArray();
+  console.log("Projetos encontrados:", query.length, query);
 
-  if (limit) query = query.limit(limit);
+  // if (limit) query = query.limit(limit);
 
-  return query.toArray();
+  return query;
 }
 
 export async function getPosts(limit?: number) {
@@ -130,18 +137,15 @@ export async function getPostBySlug(slug: string) {
   if (!db) return undefined;
 
   return db
-    .find<PostDocument>(
-      { collection: "posts", slug, status: "published" },
-      [
-        "slug",
-        "title",
-        "description",
-        "coverImage",
-        "publishedAt",
-        "status",
-        "content",
-      ],
-    )
+    .find<PostDocument>({ collection: "posts", slug, status: "published" }, [
+      "slug",
+      "title",
+      "description",
+      "coverImage",
+      "publishedAt",
+      "status",
+      "content",
+    ])
     .first();
 }
 
