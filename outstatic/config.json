@@ -8,9 +8,9 @@
       "input": "public/images",
       "label": "Images",
       "name": "images",
-      "output": "/media"
+      "output": "/images"
     }
   ],
-  "publicMediaPath": "media/",
+  "publicMediaPath": "images/",
   "repoMediaPath": "public/images/"
 }
