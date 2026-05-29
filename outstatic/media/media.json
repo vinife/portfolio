@@ -1,6 +1,18 @@
 {
-  "commit": "",
-  "generated": "2026-05-29T02:44:17.832Z",
+  "commit": "309c1cb6c5edde55262b448ef00935d2d294b3a9",
+  "generated": "2026-05-29T02:44:29.909Z",
   "media": [
+    {
+      "__outstatic": {
+        "commit": "309c1cb6c5edde55262b448ef00935d2d294b3a9",
+        "hash": "1044673521",
+        "path": "public/images/mountain2-Y4Nz.jpeg"
+      },
+      "alt": "",
+      "filename": "mountain2-Y4Nz.jpeg",
+      "publishedAt": "2026-05-29T02:44:29.909Z",
+      "source": "images",
+      "type": "image"
+    }
   ]
 }
