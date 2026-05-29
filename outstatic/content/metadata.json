@@ -1,0 +1,22 @@
+{
+  "commit": "",
+  "generated": "2026-05-29T02:08:31.614Z",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "1011247106",
+        "path": "outstatic/content/projects/exemplo.mdx"
+      },
+      "author": {
+        "name": "Vinicio",
+        "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
+      },
+      "collection": "projects",
+      "publishedAt": "2026-05-29T01:49:38.326Z",
+      "slug": "exemplo",
+      "status": "published",
+      "title": "Exemplo"
+    }
+  ]
+}
