@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.site-shell {
+  --site-background: #ffffff;
+  --site-foreground: #171717;
+
+  min-height: 100svh;
+  background: var(--site-background);
+  color: var(--site-foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.site-shell a {
+  text-underline-offset: 4px;
+}

@@ -1,3 +1,7 @@
-export default function OutstaticLayout({ children }: { children: React.ReactNode }) {
-  return <div id="outstatic">{children}</div>;
+export default function CMSLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html suppressHydrationWarning>
+      <body id="outstatic">{children}</body>
+    </html>
+  )
 }
