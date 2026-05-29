@@ -1,3 +1,16 @@
 {
-  "mdExtension": "mdx"
+  "mdExtension": "mdx",
+  "media": [
+    {
+      "categories": [
+        "image"
+      ],
+      "input": "public/images",
+      "label": "Images",
+      "name": "images",
+      "output": "/media"
+    }
+  ],
+  "publicMediaPath": "media/",
+  "repoMediaPath": "public/images/"
 }
