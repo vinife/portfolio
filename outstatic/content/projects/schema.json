@@ -15,6 +15,13 @@
       "required": false,
       "fieldType": "String",
       "dataType": "string"
+    },
+    "liveUrl": {
+      "title": "liveUrl",
+      "description": "",
+      "required": false,
+      "fieldType": "String",
+      "dataType": "string"
     }
   }
 }
