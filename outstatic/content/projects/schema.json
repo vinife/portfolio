@@ -8,6 +8,13 @@
       "required": false,
       "fieldType": "String",
       "dataType": "string"
+    },
+    "githubUrl": {
+      "title": "githubUrl",
+      "description": "",
+      "required": false,
+      "fieldType": "String",
+      "dataType": "string"
     }
   }
 }
