@@ -1,6 +1,6 @@
 {
-  "commit": "cfb9e0bb916a9b580c694db2aa7b11090aeb6ae6",
-  "generated": "2026-05-30T20:46:03.508Z",
+  "commit": "53eb3f5278d986a64250aca93c41e76db83494eb",
+  "generated": "2026-05-30T20:46:37.714Z",
   "metadata": [
     {
       "__outstatic": {
@@ -18,6 +18,22 @@
       "slug": "exemplo",
       "status": "published",
       "title": "Exemplo"
+    },
+    {
+      "__outstatic": {
+        "commit": "53eb3f5278d986a64250aca93c41e76db83494eb",
+        "hash": "2188309418",
+        "path": "outstatic/content/posts/teste-blog.mdx"
+      },
+      "author": {
+        "name": "Vinicio",
+        "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
+      },
+      "collection": "posts",
+      "publishedAt": "2026-05-30T20:28:28.643Z",
+      "slug": "teste-blog",
+      "status": "published",
+      "title": "Teste Blog"
     }
   ]
 }
