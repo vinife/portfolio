@@ -10,6 +10,12 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   const techStack = splitTechStack(project.techStack);
+  // console.log(`[Card: ${project.title}] Valor de coverImage:`, {
+  //   valor: project.coverImage,
+  //   tipo: typeof project.coverImage,
+  //   estaVazio: project.coverImage === ""
+  // });
+  // console.log(JSON.stringify(project, null, 2));
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white">

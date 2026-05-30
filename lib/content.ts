@@ -73,38 +73,57 @@ export async function getProfile() {
 
 export async function getProjects(limit?: number) {
   const db = await getDb();
-  // if (!db) return [];
-  if (!db) {
-    console.log("DB não carregou");
-    return [];
-  }
+  if (!db) return [];
+  // if (!db) {
+  //   console.log("DB não carregou");
+  //   return [];
+  // }
 
-  const query = await db
-    .find<ProjectDocument>({
-      collection: "projects",
-      status: "published",
-    })
-    .sort({ publishedAt: -1 })
-    .toArray();
-  console.log("Projetos encontrados:", query.length, query);
+  let query = db
+    .find<ProjectDocument>(
+      {
+        collection: "projects",
+        status: "published",
+      },
+      [
+        "slug",
+        "title",
+        "description",
+        "coverImage",
+        "techStack",
+        "liveUrl",
+        "githubUrl",
+        "publishedAt",
+        "status",
+      ],
+    )
+    .sort({ publishedAt: -1 });
+  // .toArray();
+  // console.log("Projetos encontrados:", query.length, query);
 
-  // if (limit) query = query.limit(limit);
+  if (limit) query = query.limit(limit);
 
-  return query;
+  return query.toArray();
 }
 
 export async function getPosts(limit?: number) {
   const db = await getDb();
   if (!db) return [];
+  const all = await db.find({}, ["slug", "title"]).toArray();
+  console.log("TUDO no banco:", JSON.stringify(all, null, 2));
 
   let query = db
-    .find<PostDocument>({
-      collection: "posts",
-      status: "published",
-    })
+    .find<PostDocument>(
+      {
+        collection: "posts",
+        status: "published",
+      },
+      ["slug", "title", "description", "coverImage", "publishedAt", "status"],
+    )
     .sort({ publishedAt: -1 });
 
   if (limit) query = query.limit(limit);
+  console.log("Post encontrados:", await query.toArray());
 
   return query.toArray();
 }
