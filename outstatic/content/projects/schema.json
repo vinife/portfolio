@@ -29,6 +29,13 @@
       "required": false,
       "fieldType": "String",
       "dataType": "string"
+    },
+    "description": {
+      "title": "description",
+      "description": "",
+      "required": false,
+      "fieldType": "String",
+      "dataType": "string"
     }
   }
 }
