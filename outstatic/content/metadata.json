@@ -1,6 +1,6 @@
 {
-  "commit": "53eb3f5278d986a64250aca93c41e76db83494eb",
-  "generated": "2026-05-30T20:46:37.714Z",
+  "commit": "b21e0baa44457cf4858bdb27f01c92c67d165884",
+  "generated": "2026-05-30T21:34:14.144Z",
   "metadata": [
     {
       "__outstatic": {
@@ -34,6 +34,22 @@
       "slug": "teste-blog",
       "status": "published",
       "title": "Teste Blog"
+    },
+    {
+      "__outstatic": {
+        "commit": "b21e0baa44457cf4858bdb27f01c92c67d165884",
+        "hash": "2734863890",
+        "path": "outstatic/content/projects/segundo.mdx"
+      },
+      "author": {
+        "name": "Vinicio",
+        "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
+      },
+      "collection": "projects",
+      "publishedAt": "2026-05-30T21:16:01.793Z",
+      "slug": "segundo",
+      "status": "published",
+      "title": "segundo"
     }
   ]
 }
