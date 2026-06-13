@@ -1,6 +1,6 @@
 {
-  "commit": "7373af68eb55a9eb72dfbb9b30f93321b2a6d72a",
-  "generated": "2026-06-13T20:22:31.162Z",
+  "commit": "63fb2a3490d93d3a96370fc466f3ff0abc6fee7e",
+  "generated": "2026-06-13T20:23:59.026Z",
   "metadata": [
     {
       "__outstatic": {
@@ -37,27 +37,6 @@
     },
     {
       "__outstatic": {
-        "commit": "8ba7c0cca6f5ae1e3398d3f28a5c1c94a94532d8",
-        "hash": "865317092",
-        "path": "outstatic/content/projects/segundo.mdx"
-      },
-      "author": {
-        "name": "Vinicio",
-        "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
-      },
-      "collection": "projects",
-      "coverImage": "/media/mountain2-Y4Nz.jpeg",
-      "description": "mais um",
-      "githubUrl": "www.github.com",
-      "liveUrl": "www.site.com",
-      "publishedAt": "2026-05-30T21:16:01.793Z",
-      "slug": "segundo",
-      "status": "published",
-      "techStack": "next.js typescript",
-      "title": "segundo"
-    },
-    {
-      "__outstatic": {
         "commit": "7373af68eb55a9eb72dfbb9b30f93321b2a6d72a",
         "hash": "271565581",
         "path": "outstatic/content/posts/segundo-post.mdx"
@@ -73,6 +52,27 @@
       "slug": "segundo-post",
       "status": "draft",
       "title": "Segundo post"
+    },
+    {
+      "__outstatic": {
+        "commit": "63fb2a3490d93d3a96370fc466f3ff0abc6fee7e",
+        "hash": "2545665347",
+        "path": "outstatic/content/projects/segundo.mdx"
+      },
+      "author": {
+        "name": "Vinicio",
+        "picture": "https://avatars.githubusercontent.com/u/87497999?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/61b764e890b24e627e43ac29e87faac7-k2Nz.jpg",
+      "description": "mais um",
+      "githubUrl": "www.github.com",
+      "liveUrl": "www.site.com",
+      "publishedAt": "2026-05-30T21:16:01.793Z",
+      "slug": "segundo",
+      "status": "published",
+      "techStack": "next.js typescript",
+      "title": "segundo"
     }
   ]
 }
