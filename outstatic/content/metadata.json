@@ -1,6 +1,6 @@
 {
-  "commit": "15ed9eff4326d39ef11194af9bd7405fdfc6c842",
-  "generated": "2026-06-13T20:35:48.570Z",
+  "commit": "13da82f3c9305fdb37bc33781c66be5c3376f1a8",
+  "generated": "2026-06-13T20:37:28.209Z",
   "metadata": [
     {
       "__outstatic": {
@@ -55,8 +55,8 @@
     },
     {
       "__outstatic": {
-        "commit": "15ed9eff4326d39ef11194af9bd7405fdfc6c842",
-        "hash": "3340198451",
+        "commit": "13da82f3c9305fdb37bc33781c66be5c3376f1a8",
+        "hash": "3654570282",
         "path": "outstatic/content/projects/segundo.mdx"
       },
       "author": {
