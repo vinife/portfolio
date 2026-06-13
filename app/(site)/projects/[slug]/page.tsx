@@ -17,7 +17,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) notFound();
 
   return (
-    <main>
+    <main className="flex-1">
       <ProjectContent project={project} />
     </main>
   );

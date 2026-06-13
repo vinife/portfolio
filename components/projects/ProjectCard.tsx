@@ -18,10 +18,10 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   // console.log(JSON.stringify(project, null, 2));
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-primary bg-bg-primary">
       <Link
         href={`/projects/${project.slug}`}
-        className="relative block aspect-[16/10] overflow-hidden bg-zinc-100"
+        className="relative block aspect-[16/10] overflow-hidden bg-muted"
       >
         {project.coverImage ? (
           <Image
@@ -40,11 +40,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
 
       <div className="flex flex-1 flex-col p-5">
         <Link href={`/projects/${project.slug}`}>
-          <h3 className="text-xl font-semibold tracking-tight text-zinc-950">
+          <h3 className="text-xl font-semibold tracking-tight text-tertiary">
             {project.title}
           </h3>
         </Link>
-        <p className="mt-3 flex-1 text-sm leading-6 text-zinc-600">
+        <p className="mt-3 flex-1 text-sm leading-6 text-secondary">
           {project.description}
         </p>
 
@@ -53,7 +53,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700"
+                className="rounded-full border border-primary px-3 py-1 text-xs font-medium text-tertiary"
               >
                 {tech}
               </span>

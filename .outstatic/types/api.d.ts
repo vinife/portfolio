@@ -2,6 +2,7 @@
 // This file provides typed overloads for Outstatic server functions
 
 import type { CollectionName, CollectionDocument, SingletonName, SingletonDocument, AllDocuments } from './collections'
+import type { PostsFields } from './posts'
 import type { ProjectsFields } from './projects'
 import type { OutstaticSchema } from 'outstatic'
 import type { Query } from 'sift'
@@ -25,11 +26,30 @@ interface FindAPI<T, P = T> {
 
 /** Infers the document type from a query's collection property */
 type InferDocumentType<Q> =
+  Q extends { collection: 'posts' } ? OutstaticSchema<PostsFields> :
   Q extends { collection: 'projects' } ? OutstaticSchema<ProjectsFields> :
   OutstaticSchema<AllDocuments>
 
 /** API returned by load() */
 interface LoadAPI {
+  /** Find posts documents with field projection (use 'as const' for type narrowing) */
+  find<K extends keyof OutstaticSchema<PostsFields>>(
+    query: { collection: 'posts' } & Record<string, unknown>,
+    projection: readonly K[]
+  ): FindAPI<OutstaticSchema<PostsFields>, Pick<OutstaticSchema<PostsFields>, K>>
+
+  /** Find posts documents */
+  find(
+    query: { collection: 'posts' } & Record<string, unknown>,
+    projection: string[]
+  ): FindAPI<OutstaticSchema<PostsFields>>
+
+  /** Find posts documents */
+  find(
+    query: { collection: 'posts' } & Record<string, unknown>,
+    projection?: { [key: string]: number }
+  ): FindAPI<OutstaticSchema<PostsFields>>
+
   /** Find projects documents with field projection (use 'as const' for type narrowing) */
   find<K extends keyof OutstaticSchema<ProjectsFields>>(
     query: { collection: 'projects' } & Record<string, unknown>,

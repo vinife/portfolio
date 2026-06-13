@@ -3,4 +3,5 @@
 
 export * from './collections'
 
+export * from './posts'
 export * from './projects'

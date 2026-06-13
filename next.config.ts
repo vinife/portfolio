@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import { withOutstatic } from "outstatic/next-plugin";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["next-mdx-remote"],
+  transpilePackages: ["next-mdx-remote", "rehype-unwrap-images"],
   images: {
     remotePatterns: [
       {

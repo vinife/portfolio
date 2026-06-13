@@ -3,6 +3,10 @@ import type { OstDocument } from 'outstatic'
 
 export interface ProjectsFields {
   coverImage?: string
+  githubUrl?: string
+  liveUrl?: string
+  techStack?: string
+  description?: string
 }
 
 export interface Projects extends OstDocument<ProjectsFields> {}

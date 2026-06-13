@@ -1,15 +1,131 @@
 @import "tailwindcss";
 
-.site-shell {
-  --site-background: #ffffff;
-  --site-foreground: #171717;
+/* ============================================
+   1. Valores RGB por tema (light/dark)
+   ============================================ */
 
-  min-height: 100svh;
-  background: var(--site-background);
-  color: var(--site-foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+:root {
+  /* Backgrounds */
+  --bg-primary: 255 255 255;
+  --bg-secondary: 250 250 250;
+  --bg-muted: 244 244 245;
+
+  /* Text */
+  --text-primary: 9 9 11;
+  --text-secondary: 24 24 27;
+  --text-tertiary: 82 82 91;
+  --text-muted: 113 113 122;
+  --text-subtle: 161 161 170;
+
+  /* Borders */
+  --border-primary: 228 228 231;
+  --border-secondary: 212 212 216;
+  --border-strong: 9 9 11;
+
+  /* Links & Decorations */
+  --link-decoration: 212 212 216;
+  --link-decoration-hover: 9 9 11;
+
+  /* Interactive Elements */
+  --interactive-bg-hover: 244 244 245;
+  --interactive-text-hover: 9 9 11;
+  --interactive-text: 82 82 91;
 }
 
-.site-shell a {
-  text-underline-offset: 4px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --bg-primary: 9 9 11;
+    --bg-secondary: 24 24 27;
+    --bg-muted: 39 39 42;
+
+    /* Text */
+    --text-primary: 250 250 250;
+    --text-secondary: 228 228 231;
+    --text-tertiary: 161 161 170;
+    --text-muted: 113 113 122;
+    --text-subtle: 82 82 91;
+
+    /* Borders */
+    --border-primary: 39 39 42;
+    --border-secondary: 63 63 70;
+    --border-strong: 250 250 250;
+
+    /* Links & Decorations */
+    --link-decoration: 63 63 70;
+    --link-decoration-hover: 250 250 250;
+
+    /* Interactive Elements */
+    --interactive-bg-hover: 24 24 27;
+    --interactive-text-hover: 255 255 255;
+    --interactive-text: 228 228 231;
+  }
+}
+
+/* ============================================
+   2. Tema do Tailwind (gera as utilities)
+   ============================================ */
+
+@theme {
+  /* Fontes */
+  --font-sans: var(--font-open-sans), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+  --font-heading: var(--font-cal-sans), sans-serif;
+
+  /* Backgrounds → bg-bg-primary, bg-bg-secondary, bg-bg-muted */
+  --color-bg-primary: rgb(var(--bg-primary));
+  --color-bg-secondary: rgb(var(--bg-secondary));
+  --color-bg-muted: rgb(var(--bg-muted));
+
+  /* Text → text-primary, text-secondary, text-tertiary, text-muted, text-subtle */
+  --color-primary: rgb(var(--text-primary));
+  --color-secondary: rgb(var(--text-secondary));
+  --color-tertiary: rgb(var(--text-tertiary));
+  --color-muted: rgb(var(--text-muted));
+  --color-subtle: rgb(var(--text-subtle));
+
+  /* Borders → border-border-primary, border-border-secondary, border-strong */
+  --color-border-primary: rgb(var(--border-primary));
+  --color-border-secondary: rgb(var(--border-secondary));
+  --color-strong: rgb(var(--border-strong));
+
+  /* Links → text-link-decoration, decoration-link-decoration, etc */
+  --color-link-decoration: rgb(var(--link-decoration));
+  --color-link-decoration-hover: rgb(var(--link-decoration-hover));
+
+  /* Interactive → bg-interactive-hover, text-interactive-text, etc */
+  --color-interactive-hover: rgb(var(--interactive-bg-hover));
+  --color-interactive-text-hover: rgb(var(--interactive-text-hover));
+  --color-interactive-text: rgb(var(--interactive-text));
+}
+
+/* ============================================
+   3. Estilos base de elementos
+   ============================================ */
+
+body {
+  background-color: rgb(var(--bg-primary));
+  color: rgb(var(--text-tertiary));
+  border-color: rgb(var(--border-primary));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(var(--text-primary));
+}
+
+a {
+  color: rgb(var(--text-secondary));
+}
+a:hover {
+  color: rgb(var(--text-primary));
+}
+
+blockquote {
+  border-color: rgb(var(--border-strong));
+  color: rgb(var(--text-secondary));
 }

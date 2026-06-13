@@ -17,7 +17,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound();
 
   return (
-    <main>
+    <main className="flex-1">
       <PostContent post={post} />
     </main>
   );
